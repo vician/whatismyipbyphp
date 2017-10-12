@@ -14,7 +14,7 @@ $parts = explode(".",$ip);
 
 if (count($parts) != 4) die($ip);
 
-$ipv6to4 = "2002:";
+$ipv6to4 = "2002";
 //foreach ($parts as $part) {
 for ($i = 0; $i < count($parts); $i++) {
 	// echo "$i: ".$parts[$i]." => ".dechex($parts[$i])." = ".($i % 2)."\n";
