@@ -17,7 +17,9 @@ if (count($parts) != 4) die($ip);
 $ipv6to4 = "2002";
 for ($i = 0; $i < count($parts); $i++) {
 	if ($i % 2 == 0) $ipv6to4 .= ":";
-	$ipv6to4 .= dechex($parts[$i]);
+	$part = dechex($parts[$i]);
+	if (strlen($part) < 2) $part = "0".$part;
+	$ipv6to4 .= $part;
 }
 $ipv6to4 .= "::";
 
